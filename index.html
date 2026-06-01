@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="index.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet"
+        type="text/css" />
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js">
+    </script>
+
+</head>
+
+<body>
+
+    <form action="/submit" method="post">
+        <h3>Cadastre-se</h3>
+
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="campo_nome" placeholder="nome completo">
+        </div>
+
+        <div class="form-group">
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" name="campo_data">
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="campo_email" placeholder="exemplo@email.com">
+        </div>
+
+        <div class="form-group">
+            <label for="tel">Telefone:</label>
+            <input type="tel" id="tel" name="campo_telefone" placeholder="(45) 99999-9999">
+        </div>
+
+        <div class="form-group">
+            <label>Habilidades:</label>
+
+            <label for="html" class="checkbox-option">
+                <input type="checkbox" id="html" name="habilidades" value="HTML"> HTML
+            </label>
+
+            <label for="css" class="checkbox-option">
+                <input type="checkbox" id="css" name="habilidades" value="CSS"> CSS
+            </label>
+
+            <label for="js" class="checkbox-option">
+                <input type="checkbox" id="js" name="habilidades" value="JS"> JavaScript
+            </label>
+
+        </div>
+
+        <div class="form-group">
+            <p>Jogo digital favorito:</p>
+
+            <label for="cod" class="radio-option">
+                <input type="radio" id="cod" name="jogo_digital" value="cod">
+                Call of duty
+            </label>
+
+            <label for="skul" class="radio-option">
+                <input type="radio" id="skul" name="jogo_digital" value="skul">
+                Skul The hero slayer
+            </label>
+
+            <label for="cuphead" class="radio-option">
+                <input type="radio" id="cuphead" name="jogo_digital" value="cuphead">
+                Cuphead
+            </label>
+
+            <label for="tibia" class="radio-option">
+                <input type="radio" id="tibia" name="jogo_digital" value="tibia">
+                Tibia
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="pais">País:</label>
+            <select name="pais" id="pais">
+
+                <option value="br">🇧🇷 Brasil</option>
+                <option value="mx">🇲🇽 México</option>
+                <option value="us">🇺🇲 Estados Unidos</option>
+                <option value="ec">🇪🇨 Equador</option>
+                <option value="jp">🇯🇵 Japão</option>
+                <option value="ru">🇷🇺Rússia</option>
+
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" minlength="8" maxlength="16">
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="comentarios">Comentários:</label><br>
+            <textarea name="comentarios" id="comentarios"></textarea>
+        </div>
+        <div class="form-group">
+
+            <button type="submit">Enviar</button>
+        </div>
+
+    </form>
+    <script>
+        new FroalaEditor("#comentarios");                     
+    </script>
+</body>
+
+</html>
